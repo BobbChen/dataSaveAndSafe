@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="加密前内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pF8-Xp-OIP">
+                                <rect key="frame" x="120" y="60" width="274" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="加密后内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eD-lu-aBA">
+                                <rect key="frame" x="120" y="120" width="274" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加密前:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMl-K9-QtH">
+                                <rect key="frame" x="40" y="64" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加密后:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTx-fQ-I8O">
+                                <rect key="frame" x="40" y="124" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fD-IH-k9G">
+                                <rect key="frame" x="40" y="327" width="30" height="30"/>
+                                <state key="normal" title="加密"/>
+                                <connections>
+                                    <action selector="encryption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7p7-hA-SR8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UM5-L3-WEj">
+                                <rect key="frame" x="344" y="327" width="30" height="30"/>
+                                <state key="normal" title="清空"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pe9-fT-iO8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6fD-IH-k9G" secondAttribute="bottom" constant="379" id="0C2-Ad-14H"/>
+                            <constraint firstAttribute="trailing" secondItem="pF8-Xp-OIP" secondAttribute="trailing" constant="20" id="4e2-9Z-ZDA"/>
+                            <constraint firstItem="4eD-lu-aBA" firstAttribute="width" secondItem="pF8-Xp-OIP" secondAttribute="width" id="587-nJ-reA"/>
+                            <constraint firstItem="JTx-fQ-I8O" firstAttribute="centerX" secondItem="jMl-K9-QtH" secondAttribute="centerX" id="EoT-cC-i2R"/>
+                            <constraint firstItem="4eD-lu-aBA" firstAttribute="top" secondItem="pF8-Xp-OIP" secondAttribute="bottom" constant="30" id="H83-2U-5tc"/>
+                            <constraint firstItem="4eD-lu-aBA" firstAttribute="leading" secondItem="pF8-Xp-OIP" secondAttribute="leading" id="RSB-oH-zis"/>
+                            <constraint firstItem="JTx-fQ-I8O" firstAttribute="centerY" secondItem="4eD-lu-aBA" secondAttribute="centerY" id="Su1-85-qu1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UM5-L3-WEj" secondAttribute="trailing" constant="20" id="TVa-TI-JON"/>
+                            <constraint firstItem="pF8-Xp-OIP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="120" id="Wf5-vl-Rbx"/>
+                            <constraint firstItem="jMl-K9-QtH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="cOt-eB-b01"/>
+                            <constraint firstItem="jMl-K9-QtH" firstAttribute="centerY" secondItem="pF8-Xp-OIP" secondAttribute="centerY" id="gNd-7O-5S1"/>
+                            <constraint firstItem="6fD-IH-k9G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="o4Z-Qj-bTX"/>
+                            <constraint firstItem="UM5-L3-WEj" firstAttribute="centerY" secondItem="6fD-IH-k9G" secondAttribute="centerY" id="pYU-Az-FAP"/>
+                            <constraint firstItem="pF8-Xp-OIP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="60" id="w6h-7v-hZl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="after" destination="4eD-lu-aBA" id="DFY-eb-o4l"/>
+                        <outlet property="before" destination="pF8-Xp-OIP" id="zaK-7n-klL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="357"/>
+        </scene>
+    </scenes>
+</document>
